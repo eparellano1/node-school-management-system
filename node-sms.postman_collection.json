@@ -1,0 +1,1333 @@
+{
+	"info": {
+		"_postman_id": "22120264-a44b-495e-b885-9c7408b284b3",
+		"name": "LMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30968178"
+	},
+	"item": [
+		{
+			"name": "Academics",
+			"item": [
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/admins/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"admins",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ernz12345@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/admins/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admins",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/admins",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Admin Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZWYwZmMyY2M4OTA3MDllMDk2ODkxNCIsImlhdCI6MTcxMDE2ODM4NywiZXhwIjoxNzEwNjAwMzg3fQ.ScDU3aT6b7vEP3OfCYtMHirm-73_5Go2qwoaRHswTIk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/admins/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/admins/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/22",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Suspend Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/suspend/teacher/69",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"suspend",
+								"teacher",
+								"69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Unsuspend Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/unsuspend/teacher/69",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"unsuspend",
+								"teacher",
+								"69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Withdraw Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/withdraw/teacher/69",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"withdraw",
+								"teacher",
+								"69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Unwithdraw Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/unwithdraw/teacher/69",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"unwithdraw",
+								"teacher",
+								"69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Publish Exam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/publish/exam/420",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"publish",
+								"exam",
+								"420"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Unpublish Exam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/admins/unpublish/exam/420",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admins",
+								"unpublish",
+								"exam",
+								"420"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AcademicYear",
+			"item": [
+				{
+					"name": "Create Academic-year",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2023-2024 Academic Year\",\r\n    \"fromYear\": \"2023\",\r\n    \"toYear\": \"2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/academic-years",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-years"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Academic-years",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-years",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-years"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Academic Year",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-years/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-years",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Academic Year",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2022-2023 Academic Year\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/academic-years/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-years",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Academic Year Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-years/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-years",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AcademicTerm",
+			"item": [
+				{
+					"name": "Create Academic Term",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"2023-2024 Academic Year\",\r\n    \"description\": \"academicTerm for 23024\",\r\n    \"fromYear\": \"2023\",\r\n    \"toYear\": \"2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/academic-terms",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-terms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Academic Terms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-terms",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-terms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Academic Term",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-terms/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-terms",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Academic Term",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-terms/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-terms",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Academic Term",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/academic-years/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"academic-years",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClassLevel",
+			"item": [
+				{
+					"name": "Create Class Level",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Level 200\",\r\n    \"description\": \"Level 200 class\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/class-levels",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"class-levels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Class Level",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/class-levels",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"class-levels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Class Level",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/class-levels/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"class-levels",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Class Level",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/class-levels/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"class-levels",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Class Level",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/class-levels/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"class-levels",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Program",
+			"item": [
+				{
+					"name": "Create Program",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Software Engineering\",\r\n    \"description\": \"Software engg program\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/programs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"programs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Programs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/programs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"programs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Program",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/programs/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"programs",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Program",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/programs/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"programs",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Program",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/programs/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"programs",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subjects",
+			"item": [
+				{
+					"name": "Create Subject",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Introduction to aUTOMATA\",\r\n    \"description\": \"This is intro to AUTOMATA\",\r\n    \"academicTerm\": \"65f9062532a21ba2126d7696\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/subjects/65f905cf32a21ba2126d7688",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"subjects",
+								"65f905cf32a21ba2126d7688"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Subjects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/subjects",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Subject",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/subjects/65f9063332a21ba2126d769e",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"subjects",
+								"65f9063332a21ba2126d769e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subject",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Intro to HTML1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/subjects/65f9063332a21ba2126d769e",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"subjects",
+								"65f9063332a21ba2126d769e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subject",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/subjects/65f9063332a21ba2126d769e",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"subjects",
+								"65f9063332a21ba2126d769e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Year Groups",
+			"item": [
+				{
+					"name": "Create Year Group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Software Engineering\",\r\n    \"description\": \"Software engg program\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/year-groups",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"year-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Year Groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/year-groups",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"year-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Year Group",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/year-groups/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"year-groups",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Year Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/year-groups/65efe6f88d533280eac60054",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"year-groups",
+								"65efe6f88d533280eac60054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Year Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/year-groups/65f90bd896c1502f287ce87e",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"year-groups",
+								"65f90bd896c1502f287ce87e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teachers",
+			"item": [
+				{
+					"name": "Admin Register Teacher",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ernz Arellano\",\r\n    \"email\": \"eparellano1@up.edu.ph\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/teachers/admin/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"teachers",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Teacher",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ernz Arellano\",\r\n    \"email\": \"eparellano1@up.edu.ph\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/teachers/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"teachers",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Get All Teachers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ernz Arellano\",\r\n    \"email\": \"eparellano1@up.edu.ph\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/admin/teachers",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admin",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Get Teacher",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ernz Arellano\",\r\n    \"email\": \"eparellano1@up.edu.ph\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/admin/teachers",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"admin",
+								"teachers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teacher Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{teacherToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ernz Arellano\",\r\n    \"email\": \"eparellano1@up.edu.ph\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/teachers/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"teachers",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Teacher Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{teacherToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ernz Arellano1\",\r\n    \"email\": \"eparellano2@up.edu.ph\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/teachers/65f927ebf211d2c79d3ca01e/update",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"teachers",
+								"65f927ebf211d2c79d3ca01e",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin update Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"program\": \"Software Engineering\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/teachers/65f927ebf211d2c79d3ca01e/update/admin",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"teachers",
+								"65f927ebf211d2c79d3ca01e",
+								"update",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
