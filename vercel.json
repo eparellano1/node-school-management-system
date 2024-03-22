@@ -1,10 +1,8 @@
 {
     "version": 2,
-    "buildCommand": "yarn server",
+    "buildCommand": "npm run server",
     "installCommand": "npm install",
-    "builds": [
-        { "src": "*.js", "use": "@vercel/node" }
-    ],
+
     "routes": [{ 
         "src": "/(.*)", 
         "dest": "/",
