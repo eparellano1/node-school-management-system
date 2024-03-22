@@ -43,6 +43,9 @@ app.use(express.json()) // pass incoming json data
 
 // Routes
 // admin express middleware
+app.get('/', (req, res) => {
+    res.json("Connected")
+})
 app.use('/api/v1/admins', adminRouter)
 app.use('/api/v1/academic-years', academicYearRouter)
 app.use('/api/v1/academic-terms', academicTermRouter)
