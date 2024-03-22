@@ -1,3 +1,8 @@
+
+# Project Title
+
+A brief description of what this project does and who it's for
+
 ## node-school-management-system
 Backend service for a school management system written in NodeJS and Express
 
@@ -26,6 +31,18 @@ node-sms.postman_collection.json
 ```
 
 Different CRUD operations for each model are present in the collection, with specific endpoints and data needed found in the /controller folder.
+
+Create an environment in postman and add the variable
+
+```
+baseURL: http://localhost:3000/api/v1
+```
+
+Alternatively, the backend service can be run without local installation by setting the baseURL variable to:
+
+```
+baseURL: https://node-school-management-system.onrender.com/api/v1
+```
 
 ### Admin Registration
 To access the different endpoints, you should register first as an admin. Under the Academics folder in Postman, using the 'Register Admin' request, send the following data in the body as a JSON format:
