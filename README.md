@@ -1,10 +1,6 @@
 
-# Project Title
-
-A brief description of what this project does and who it's for
-
-## node-school-management-system
-Backend service for a school management system written in NodeJS and Express
+# node-school-management-system
+Backend service for a school management system written in NodeJS and Express, with MongoDB as a database
 
 ## Local installation
 Open a terminal and clone the repo to your local device
